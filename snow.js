@@ -44,7 +44,7 @@ function randomise(range) {
 
 function initSnow() {
 	var snowSize = snowMaxSize - snowMinSize;
-	marginBottom = document.body.scrollHeight - 5;
+	marginBottom = document.body.scrollHeight - 15;
 	marginRight = document.body.clientWidth - 15;
 
 	for (i = 0; i <= snowMax; i++) {
