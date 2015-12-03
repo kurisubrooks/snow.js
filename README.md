@@ -7,6 +7,6 @@ Pure JavaScript Snowfall
 <style>html,body{height:100%;}</style>
 ```
 
-##### Thanks
-Original by [rainbow.arch.scriptmania](http://rainbow.arch.scriptmania.com/)  
-Updated and modified by [kurisubrooks.com](https://kurisubrooks.com)
+### Contributors
+[rainbow.arch.scriptmania.com](http://rainbow.arch.scriptmania.com/)  
+[kurisubrooks.com](https://kurisubrooks.com)
