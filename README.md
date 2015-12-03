@@ -4,7 +4,7 @@ Pure JavaScript Snowfall
 ### Usage
 ```html
 <script src="snow.js"></script>
-<style>html,body{height:100%;}</style>
+<style>html,body{margin:0;height:100%;}</style>
 ```
 
 ### Contributors
