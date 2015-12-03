@@ -1,5 +1,5 @@
 # Snow.js
-Pure JavaScript Snowfall
+Pure JavaScript Snowfall &mdash; [Demo](http://kurisubrooks.github.io/snow.js/)
 
 ### Usage
 ```html
