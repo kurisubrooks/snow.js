@@ -1,5 +1,5 @@
 /*!
-// Snow.js - v0.0.2
+// Snow.js - v0.0.3
 // kurisubrooks.com
 */
 
@@ -13,21 +13,24 @@ var snowColor = ["#DDD", "#EEE"];
 var snowEntity = "&#x2022;";
 
 // Falling Velocity
-var snowSpeed = 0.8;
+var snowSpeed = 0.75;
 
 // Minimum Flake Size
 var snowMinSize = 8;
 
 // Maximum Flake Size
-var snowMaxSize = 22;
+var snowMaxSize = 24;
+
+// Refresh Rate (in milliseconds)
+var snowRefresh = 50;
 
 // Additional Styles
 var snowStyles = "cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";
 
 /*
-// END OF CONFIG
-// --------------------------------------
-// DO NOT MODIFY THE CODE BELOW THIS LINE
+// End of Configuration
+// ----------------------------------------
+// Do not modify the code below this line
 */
 
 var snow = [],
@@ -67,6 +70,11 @@ function initSnow() {
 	moveSnow();
 }
 
+function resize() {
+	marginBottom = document.body.scrollHeight - 5;
+	marginRight = document.body.clientWidth - 15;
+}
+
 function moveSnow() {
 	for (i = 0; i <= snowMax; i++) {
 		coords[i] += pos[i];
@@ -80,11 +88,12 @@ function moveSnow() {
 		}
 	}
 
-	setTimeout("moveSnow()", 50);
+	setTimeout("moveSnow()", snowRefresh);
 }
 
 for (i = 0; i <= snowMax; i++) {
 	document.write("<span id='flake" + i + "' style='" + snowStyles + "position:absolute;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
 }
 
+window.onresize = resize;
 window.onload = initSnow;
